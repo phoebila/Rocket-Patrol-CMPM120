@@ -5,13 +5,30 @@ class Menu extends Phaser.Scene {
 
     preload() {
         // load images/tile sprites
-        this.load.image('rocket', '/Rocket Patrol/assets/rocket.png')
+        this.load.image('rocket', "/Rocket Patrol/assets/rocket.png")
         this.load.image('spaceship', '/Rocket Patrol/assets/spaceship.png')
         this.load.image('starfield', '/Rocket Patrol/assets/starfield.png')
+
+        // load spritesheet
+        this.load.spritesheet('explosion', '/Rocket Patrol/assets/explosion.png', {
+            frameWidth: 64,
+            frameHeight: 32,
+            startFrame: 0,
+            endFrame: 9
+        })
       }
 
     create() {
+
+        // animation configuration
+        this.anims.create({
+            key: 'explode',
+            frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 9, first: 0}),
+            frameRate: 30
+        })
+
         this.add.text(20, 20, "Rocket Patrol Menu")
         this.scene.start("playScene")
       }
+
 }
