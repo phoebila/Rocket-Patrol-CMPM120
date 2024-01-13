@@ -5,12 +5,12 @@ class Menu extends Phaser.Scene {
 
     preload() {
         // load images/tile sprites
-        this.load.image('rocket', "/Rocket Patrol/assets/rocket.png")
-        this.load.image('spaceship', '/Rocket Patrol/assets/spaceship.png')
-        this.load.image('starfield', '/Rocket Patrol/assets/starfield.png')
+        this.load.image('rocket', "./assets/rocket.png")
+        this.load.image('spaceship', './assets/spaceship.png')
+        this.load.image('starfield', './assets/starfield.png')
 
         // load spritesheet
-        this.load.spritesheet('explosion', '/Rocket Patrol/assets/explosion.png', {
+        this.load.spritesheet('explosion', './assets/explosion.png', {
             frameWidth: 64,
             frameHeight: 32,
             startFrame: 0,
@@ -18,9 +18,9 @@ class Menu extends Phaser.Scene {
         })
 
         // load audio
-        this.load.audio('sfx-select', '/Rocket Patrol/assets/sfx-select.wav')
-        this.load.audio('sfx-explosion', '/Rocket Patrol/assets/sfx-explosion.wav')
-        this.load.audio('sfx-shot', '/Rocket Patrol/assets/sfx-shot.wav')
+        this.load.audio('sfx-select', './assets/sfx-select.wav')
+        this.load.audio('sfx-explosion', './assets/sfx-explosion.wav')
+        this.load.audio('sfx-shot', './assets/sfx-shot.wav')
       }
 
     create() {
